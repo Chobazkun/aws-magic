@@ -9,7 +9,16 @@
 - **Command Execution Confirmation**: Users can choose to execute the suggested command directly from the CLI.
 
 ## Installation
-To install `aws-magic`, clone this repository and navigate to the project directory. Then, follow these steps:
+
+### For Users
+To install `aws-magic` globally and use it from anywhere in your command line interface, run:
+
+```bash
+npm install -g aws-magic
+```
+
+### For project contributors
+If you are a developer and want to contribute to `aws-magic`, clone the repository and run the following command in the project directory to install dependencies:
 
 1. Run `npm install` to install the required dependencies.
 2. Use `npm link` to symlink the package globally for development testing.
