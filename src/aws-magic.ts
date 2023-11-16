@@ -7,6 +7,10 @@ import fs from 'fs/promises';
 import axios from 'axios';
 import process from 'process';
 import { exec } from 'child_process';
+import os from 'os';
+import path from 'path';
+
+const configFilePath = path.join(os.homedir(), '.aws-magic', 'config.json');
 
 const program = new Command();
 
@@ -30,7 +34,10 @@ async function configure() {
             }
         ]);
 
-        await fs.writeFile('config.json', JSON.stringify({ openaiKey: answers.openaiKey }));
+        const configDir = path.dirname(configFilePath);
+        await fs.mkdir(configDir, { recursive: true });
+
+        await fs.writeFile(configFilePath, JSON.stringify({ openaiKey: answers.openaiKey }));
         console.log('OpenAI API Key configured successfully.');
     } catch (error) {
         console.error('Error configuring API Key:', error);
@@ -44,7 +51,7 @@ program
 
 async function translateText(text: string) {
     try {
-        const configData = await fs.readFile('config.json', 'utf-8');
+        const configData = await fs.readFile(configFilePath, 'utf-8');
         const { openaiKey } = JSON.parse(configData);
 
         const response = await axios.post(
@@ -57,7 +64,7 @@ async function translateText(text: string) {
                         content: `Translate the following to an AWS CLI command. Return only the AWS CLI command in the response, nothing else : ${text}`
                     }
                 ],
-                temperature: 0.7  // Adjust as needed
+                temperature: 0.2  // Adjust as needed
             },
             {
                 headers: {

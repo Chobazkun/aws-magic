@@ -1,14 +1,15 @@
 {
   "name": "aws-magic",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "`aws-magic` is a CLI tool that leverages the OpenAI API to translate natural language descriptions into AWS CLI commands.",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
+    "prepublishOnly": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Chobaz",
   "license": "ISC",
   "devDependencies": {
     "@types/inquirer": "^9.0.7",
