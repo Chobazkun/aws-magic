@@ -1,12 +1,12 @@
-# AWS Magic CLI Tool
+# 🧙 AWS Magic CLI Tool
 
 ## Overview
 `aws-magic` is a CLI tool that leverages the OpenAI API to translate natural language descriptions into AWS CLI commands. It allows users to input a description of the task they want to perform with AWS, and then suggests the corresponding AWS CLI command.
 
 ## Features
-- **Configure OpenAI API Key**: Set up your OpenAI API key for the tool.
-- **Translate Descriptions to AWS CLI Commands**: Input a description and get a suggested AWS CLI command.
-- **Command Execution Confirmation**: Users can choose to execute the suggested command directly from the CLI.
+- **Configure OpenAI API Key 🔑**: Set up your OpenAI API key for the tool.
+- **Translate Descriptions to AWS CLI Commands 💬**: Input a description and get a suggested AWS CLI command.
+- **Command Execution Confirmation ✅**: Users can choose to execute the suggested command directly from the CLI.
 
 ## Installation
 
