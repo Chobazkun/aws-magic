@@ -1,6 +1,6 @@
 {
   "name": "aws-magic",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "`aws-magic` is a CLI tool that leverages the OpenAI API to translate natural language descriptions into AWS CLI commands.",
   "main": "index.js",
   "scripts": {
@@ -8,9 +8,17 @@
     "prepublishOnly": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["cli", "aws", "openai", "command generator"],
   "author": "Chobaz",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chobazkun/aws-magic"
+  },
+  "homepage": "https://github.com/Chobazkun/aws-magic#readme",
+  "bugs": {
+    "url": "https://github.com/Chobazkun/aws-magic/issues"
+  }, 
   "devDependencies": {
     "@types/inquirer": "^9.0.7",
     "typescript": "^5.2.2"
